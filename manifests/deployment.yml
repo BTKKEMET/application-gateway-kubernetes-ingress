@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "hqazinfdevk8clu01-9b63"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hqazinfdevk8clu01-9b63"
+  template:
+    metadata:
+      labels:
+        app: "hqazinfdevk8clu01-9b63"
+    spec:
+      containers:
+        - name: "hqazinfdevk8clu01-9b63"
+          image: "infdev.azurecr.io/hqazinfdevk8clu01"
+          ports:
+          - containerPort: 80
